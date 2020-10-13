@@ -1,10 +1,10 @@
 import React from "react"
-import Nav from './Nav'
+import Jumbotron from 'react-bootstrap/Jumbotron'
+
 export default function Header() {
   return (
-    <header>
-      <h1>React To Do App</h1>
-      <Nav />
-    </header>
+    <Jumbotron className='jumbo'>
+      <h1>To Do App!</h1>
+    </Jumbotron>
   );
 }

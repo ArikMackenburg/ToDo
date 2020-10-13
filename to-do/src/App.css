@@ -1,7 +1,3 @@
-* {    
-  margin: 0;
-  padding: 0;
-}
 .App {
   text-align: center;
 }
@@ -43,15 +39,19 @@
 
 a {
   text-decoration: none;
-  color:black;
+  color:black !important;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: larger;
+  font-size: large;
 }
 li {
+  color: black;
   list-style: none;
   display: inline-block;
-  padding: 10px;
+  margin-top:5px;
+  margin-bottom: -15px;
+  border-radius: 10px 0px 0px 0px;
 }
+
 
 header {
   background-color: grey;
@@ -60,5 +60,115 @@ main {
   margin: auto;
   text-align: center;
 }
+.jumbo {
+  background-image: url(./assets/50n9ne.jpg);
+  background-size: stretch;
+  background-position: center;
+  min-height: 300px;
+  margin: auto;
+  margin: -15px 10px 10px 10px;
+  color: white;
+}
+h1 {
+  padding-top: 130px;
+}
+
+.tab-active {
+  background-color: orchid;
+  color: white !important;
+  list-style: none;
+  display: inline-block;
+  margin-top:5px;
+  padding: 10px 10px 0px 10px;
+  margin-bottom: -15px;
+  border-radius: 10px 0px 0px 0px;
+ 
+}
+
+
+.tab-inactive {
+  background-color: white;
+  color: black;
+  list-style: none;
+  display: inline-block;
+  margin-top:5px;
+  padding: 10px 10px 0px 10px;
+  margin-bottom: -15px;
+  border-radius: 10px 0px 0px 0px;
+}
+
+.tab-active2 {
+  background-color: orangered !important;
+  color: white !important;
+  list-style: none;
+  display: inline-block;
+  margin-top:5px;
+  padding: 10px 10px 0px 10px;
+  margin-bottom: -15px;
+  border-radius: 10px 0px 0px 0px;
+}
+h2 {
+  margin: auto;
+  background-color: grey;
+  padding: 10px;
+  color: white;
+}
+.taskDiv {
+  width: 90%;
+  margin: auto;
+}
+.slider {
+  width: 100%;
+}
+form {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 20%;
+  padding: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+}
+input {
+  width: 90%;
+}
+
+.taskItem {
+  display: block;
+  box-sizing: border-box;
+  padding: 15px;
+  font-size: large;
+  
+  background-color: rgba(0,255,0,0.8);
+  margin: auto;
+  border-radius: 0px;
+  width: 80%;
+}
+section {
+  box-sizing: border-box;
+  width: 80%;
+  float: right;
+  border-radius: 25px;
+}
+ul {
+  border-radius: 25px;
+}
+.incompleteTaskItem {
+  display: block;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: large;
+  
+  background-color: rgba(255,0,0,0.8);
+  margin: auto;
+  border-radius: 0px;
+  width: 80%;
+}
+
+
+
+
+
+
 
 
