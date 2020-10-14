@@ -8,12 +8,7 @@ import Tasks from './Tasks';
 import Nav from './components/Nav';
 
 
-const taskList = [
-  {task:"Do Stuff", complete:true},
-  {task:"Do More Stuff", complete:true},
-  {task:"Do Even More Stuff", complete:true},
-  {task:"Do Even More More Stuff", complete:false}
-]
+
 
 
 function App() {
@@ -27,7 +22,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/Tasks">
-            <Tasks tasks={ taskList } />
+            <Tasks />
           </Route>
         </Switch>
       </div>
