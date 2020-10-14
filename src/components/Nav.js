@@ -1,6 +1,7 @@
 import React from "react"
 import { NavLink } from 'react-router-dom'
 
+
 export default function Nav() {
   return (
     <ActivePage />
@@ -10,7 +11,7 @@ export default function Nav() {
 class ActivePage extends React.Component {
   state = {
     home: true,
-
+    tasks: false
   }
   render() {
     return (
@@ -20,13 +21,13 @@ class ActivePage extends React.Component {
           <li>
             <NavLink id="homeTab" 
             className={ this.state.home ? "tab-active": "tab-inactive"}
-            onClick={() => this.setState({home: true})}
+            onClick={() => this.setState({home: true,tasks: false})}
             to='/'>Home</NavLink>
           </li>
           <li>
             <NavLink id="taskTab" 
-            className={ this.state.home ? "tab-inactive": "tab-active2"}
-            onClick={() => this.setState({home: false})}
+            className={ this.state.tasks ? "tab-active2": "tab-inactive"}
+            onClick={() => this.setState({home: false, tasks: true})}
             to='/Tasks'>Tasks</NavLink>
           </li>
         </ul>

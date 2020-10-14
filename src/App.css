@@ -112,6 +112,7 @@ h2 {
   background-color: grey;
   padding: 10px;
   color: white;
+  display: inline-block;
 }
 .taskDiv {
   width: 90%;
@@ -164,6 +165,18 @@ ul {
   border-radius: 0px;
   width: 80%;
 }
+.login {
+  display: inline;
+  border: none;
+}
+.taskBar {
+  background-color: grey;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
 
 
 
