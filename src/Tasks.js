@@ -8,36 +8,7 @@ export default function Tasks() {
 
   const { user } = useAuth();
 
-  function TaskCard(task,idx) {
-    if(!user) {
-      return (
-        <Alert onClick={() => updateTask(idx)} color={task.status === true? "success" : "danger"} key={idx}className={taskStatus(task.status)}>
-          <Badge color={task.status === true? "success" : "danger"} pill>{task.status === true? "Complete" : "Incomplete"}</Badge>
-          <br></br>
-          <h3>Task: {task.task}</h3>
-        </Alert>
-      )
-    }
-    if(user.permissions.includes("delete")) {
-      return (
-        <Alert onClick={() => updateTask(idx)} color={task.status === true? "success" : "danger"} key={idx}className={taskStatus(task.status)}>
-          <Badge color={task.status === true? "success" : "danger"} pill>{task.status === true? "Complete" : "Incomplete"}</Badge>
-          <br></br>
-          <h3>Task: {task.task}</h3>
-          <Button onClick={() => removeTask(idx)}>Delete</Button>
-        </Alert>
-      )
-    }
-    else {
-      return (
-        <Alert onClick={() => updateTask(idx)} color={task.status === true? "success" : "danger"} key={idx}className={taskStatus(task.status)}>
-          <Badge color={task.status === true? "success" : "danger"} pill>{task.status === true? "Complete" : "Incomplete"}</Badge>
-          <br></br>
-          <h3>Task: {task.task}</h3>
-        </Alert>
-      )
-    }
-  }
+  
 
   const[tasks,setTasks] = useState([
     {task:"Do Stuff", who:"Bob", difficulty: 1, status:true},
@@ -84,6 +55,36 @@ export default function Tasks() {
   }
   function addTask(newTask) {
     setTasks([newTask, ...tasks]);
+  }
+  function TaskCard(task,idx) {
+    if(!user) {
+      return (
+        <Alert onClick={() => updateTask(idx)} color={task.status === true? "success" : "danger"} key={idx}className={taskStatus(task.status)}>
+          <Badge color={task.status === true? "success" : "danger"} pill>{task.status === true? "Complete" : "Incomplete"}</Badge>
+          <br></br>
+          <h3>Task: {task.task}</h3>
+        </Alert>
+      )
+    }
+    if(user.permissions.includes("delete")) {
+      return (
+        <Alert onClick={() => updateTask(idx)} color={task.status === true? "success" : "danger"} key={idx}className={taskStatus(task.status)}>
+          <Badge color={task.status === true? "success" : "danger"} pill>{task.status === true? "Complete" : "Incomplete"}</Badge>
+          <br></br>
+          <h3>Task: {task.task}</h3>
+          <Button onClick={() => removeTask(idx)}>Delete</Button>
+        </Alert>
+      )
+    }
+    else {
+      return (
+        <Alert onClick={() => updateTask(idx)} color={task.status === true? "success" : "danger"} key={idx}className={taskStatus(task.status)}>
+          <Badge color={task.status === true? "success" : "danger"} pill>{task.status === true? "Complete" : "Incomplete"}</Badge>
+          <br></br>
+          <h3>Task: {task.task}</h3>
+        </Alert>
+      )
+    }
   }
 
   return (
