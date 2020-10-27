@@ -10,6 +10,7 @@ export function useAuth() {
   if (!auth) throw new Error('You are missing AuthProvider!');
   return auth;
 }
+
 export function AuthProvider(props) {
   const [state, setState] = useState({
     user: null,
@@ -67,10 +68,7 @@ export function AuthProvider(props) {
       },
       body: JSON.stringify({ email, username, password }),
     });
-  
     const resultBody = await result.json();
-  
-    
     await login(username,password);
     
   }
